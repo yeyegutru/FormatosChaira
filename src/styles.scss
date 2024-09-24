@@ -1,1 +1,303 @@
-/* You can add global styles to this file, and also import other style files */
+// @import '~normalize.css';
+:root{
+    /* Neutral */
+--neutral-50: #EFF3F7;
+--neutral-100: #E0E6EF;
+--neutral-200: #D0DAE7;
+--neutral-300: #C1CDE0;
+--neutral-400: #B1C1D8;
+--neutral-500: #A2B4D0;
+--neutral-600: #6483B1;
+--neutral-700: #46618A;
+--neutral-800: #2E415C;
+
+--neutral-900: #17202E;
+
+    /* primary */
+--Primary-50:#D6E6FF;
+--Primary-100:#ADCDFF;
+--Primary-200:#5C9BFF;
+--Primary-300:#3382FF;
+--Primary-400:#0A69FF;
+--Primary-500:#1d50de;
+--Primary-600:#1944BD;
+--Primary-700:#003486;
+--Primary-800:#00235A;
+--Primary-900:#00112D;
+
+/* Secondary */
+
+--Secondary-50:#FDF1F6;
+--Secondary-100:#FBE2ED;
+--Secondary-200:#F9D4E4;
+--Secondary-300:#F7C6DA;
+--Secondary-400:#F5B8D1;
+--Secondary-500:#F19BBF;
+--Secondary-600:#E75693;
+--Secondary-700:#D01D68;
+--Secondary-800:#8B1345;
+--Secondary-900:#450A23;
+
+/* Secondary 2 */
+
+--Secondary2-50:#DAFCFB;
+--Secondary2-100:#C8FAF8;
+--Secondary2-200:#90F5F2;
+--Secondary2-300:#6BF1ED;
+--Secondary2-400:#21EBE4;
+--Secondary2-500:#13D0CA;
+--Secondary2-600:#0FA6A2;
+--Secondary2-700:#0B7D79;
+--Secondary2-800:#085351;
+--Secondary2-900:#042A28;
+
+/* shades */
+--Shades-50:#FFFFFF;
+--Shades-100:#000000;
+
+/* Success */
+--Success-50:#ECFDF5;
+--Success-100:#D1FAE5;
+--Success-200:#A7F3D0;
+--Success-300:#6EE7B7;
+--Success-400:#34D399;
+--Success-500:#10B981;
+--Success-600:#059669;
+--Success-700:#047857;
+--Success-800:#065F46;
+--Success-900:#064E3B;
+
+/* warning */
+
+--Warning-50:#FFFBEB;
+--Warning-100:#FEF3C7;
+--Warning-200:#FDE68A;
+--Warning-300:#FCD34D;
+--Warning-400:#FBBF24;
+--Warning-500:#F59E0B;
+--Warning-600:#D97706;
+--Warning-700:#B45309;
+--Warning-800:#92400E;
+--Warning-900:#78350F;
+
+/* error */
+--Error-50:#FEF2F2;
+--Error-100:#FEE2E2;
+--Error-200:#FECACA;
+--Error-300:#FCA5A5;
+--Error-400:#F87171;
+--Error-500:#EF4444;
+--Error-600:#DC2626;
+--Error-700:#B91C1C;
+--Error-800:#991B1B;
+--Error-900:#7F1D1D;
+
+
+/* Typografy */
+
+/* H1 */
+--Font-H1-normal: normal 400 32px "Tahoma", "Arial", "Helvetica", sans-serif;
+--Font-H1-bold: normal 600 32px "Tahoma", "Arial", "Helvetica", sans-serif;
+--Font-H1-extra-bold: normal 800 32px "Tahoma", "Arial", "Helvetica", sans-serif;
+--Font-H1-S-normal: normal 400 24px "Tahoma", "Arial", "Helvetica", sans-serif;
+--Font-H1-S-bold: normal 600 24px "Tahoma", "Arial", "Helvetica", sans-serif;
+--Font-H1-S-extra-bold: normal 800 24px "Tahoma", "Arial", "Helvetica", sans-serif;
+
+/* H2 */
+--Font-H2-normal: normal 400 24px "Tahoma", "Arial", "Helvetica", sans-serif;
+--Font-H2-bold: normal 600 24px "Tahoma", "Arial", "Helvetica", sans-serif;
+--Font-H2-extra-bold: normal 800 24px "Tahoma", "Arial", "Helvetica", sans-serif;
+--Font-H2-S-normal: normal 400 18px "Tahoma", "Arial", "Helvetica", sans-serif;
+--Font-H2-S-bold: normal 600 18px "Tahoma", "Arial", "Helvetica", sans-serif;
+--Font-H2-S-extra-bold: normal 800 18px "Tahoma", "Arial", "Helvetica", sans-serif;
+/* H3 */
+--Font-H3-normal: normal 400 20px "Tahoma", "Arial", "Helvetica", sans-serif;
+--Font-H3-bold: normal 600 20px "Tahoma", "Arial", "Helvetica", sans-serif;
+--Font-H3-extra-bold: normal 800 20px "Tahoma", "Arial", "Helvetica", sans-serif;
+--Font-H3-S-normal: normal 400 16px "Tahoma", "Arial", "Helvetica", sans-serif;
+--Font-H3-S-bold: normal 600 16px "Tahoma", "Arial", "Helvetica", sans-serif;
+--Font-H3-S-extra-bold: normal 800 16px "Tahoma", "Arial", "Helvetica", sans-serif;
+
+/* A */
+--Font-A-normal: normal 400 18px "Tahoma", "Arial", "Helvetica", sans-serif;
+--Font-A-bold: normal 600 18px "Tahoma", "Arial", "Helvetica", sans-serif;
+--Font-A-extra-bold: normal 800 18px "Tahoma", "Arial", "Helvetica", sans-serif;
+
+
+/* p */
+--Font-P-normal: normal 400 16px "Tahoma", "Arial", "Helvetica", sans-serif;
+--Font-P-bold: normal 600 16px "Tahoma", "Arial", "Helvetica", sans-serif;
+--Font-P-extra-bold: normal 800 16px "Tahoma", "Arial", "Helvetica", sans-serif;
+/* p2 */
+--Font-P2-normal: normal 400 18px "Tahoma", "Arial", "Helvetica", sans-serif;
+--Font-P2-bold: normal 600 18px "Tahoma", "Arial", "Helvetica", sans-serif;
+--Font-P2-extra-bold: normal 800 18px "Tahoma", "Arial", "Helvetica", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+    font: var(--Font-H3-normal);
+  }
+  html, body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+
+  
+  
+  // .contenedor-information {
+  //   width: 100%;
+  //   height: 100vh;
+  //   display: grid;
+  //   grid-template-columns: repeat(auto-fill,1fr);
+  //   border-left: 1px solid var(--neutral-500);
+  //   /* overflow: hidden; */
+  // }
+  // .information-section {
+  //   display: flex;
+  //   flex-direction: column;
+  //   width: 100%;
+  //   // border: 1px solid var(--neutral-100);
+  //   overflow: hidden;
+  // }
+  
+  // .information-body {
+  //   flex: 1 1 auto;
+  //   overflow: auto;
+  //   width: 95%;
+  //   margin: 10px auto;
+  //   box-sizing: border-box;
+    
+  // }
+  
+  // .separador {
+  //   height: 10%;
+  //   width: 100%;
+  //   background: var(--neutral-100);
+  // }
+  
+  
+  // .information-body.ng-hidden {
+  //   display: none; /* Oculta el contenido */
+  // }
+  // .information-body.ng-visible {
+  //   display: block; /* Muestra el contenido */
+  // }
+  // .display {
+  //   display: flex;
+  // }
+  
+  
+  
+  // .ocultar {
+  //   display: none;
+  // }
+  
+  // .margin-basic {
+  //   margin: 8px;
+  // }
+  // .padding-basic {
+  //   padding: 10px;
+  // }
+  // .flex-start{
+  //   margin-left: 3%;
+  //   align-self: flex-start;
+  // }
+  // .flex-end{
+  //   margin-right: 3%;
+  //   align-self: flex-end;
+  // }
+  
+  
+  // .row {
+  //   display: flex;
+  //   flex-direction: row;
+  //   justify-content: center;
+  //   align-items: center;
+  // }
+  // .column{
+  //   display: flex;
+  //   flex-direction: column;
+  // }
+  
+  // .img-formato{
+  //     width: 100%;
+  // }
+  
+  // a{
+  //   text-decoration: none;
+  // }
+  
+  
+  // .repetir {
+  //   width: 90%;
+  //   height: 16px;
+  //   margin: 0 8px;
+  //   border-bottom: 2px solid black;
+  // }
+  // .selector_atributo{
+  //   font: var(--Font-P-normal);
+  //   margin: 15px;
+  // }
+  // .checker-input{
+  //   width: 20px;
+  //   height: 20px;
+  // }
+
+  .contenedor-s{
+    width: 100%;
+    height: 100vh;
+  }
+
+  .contenedor-information {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid var(--neutral-500);
+    overflow: hidden;
+  }
+
+  .information-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .information-body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    // height: 100vh;
+    margin: 10px auto;
+    overflow: auto;
+  }
+  
+  .separador {
+    height: auto;
+    width: 100%;
+    background: var(--neutral-100);
+  }
+  
+  
+  .information-body.ng-hidden {
+    display: none; /* Oculta el contenido */
+  }
+  
+  .information-body.ng-visible {
+    display: block; /* Muestra el contenido */
+  }
+  // .display {
+  //   display: flex;
+  // }
+  
+  .information-section.no-flex {
+     flex: none;
+}

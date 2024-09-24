@@ -1,0 +1,20 @@
+<div class="information-section">
+
+    <!-- Header  -->
+    <app-header texto='{{texto}}' [arrowIconClass]="getArrowIconClass(section)" (click)="toggleSection(section)">
+    </app-header>
+    <!-- button -->
+
+    <!-- Contenedor de la informacion  -->
+    <app-button clases_btn="btn crear icon flex-start margin_top margin_left" Id="btn-1" texto="crear"
+        clases_icono=" fas fa-plus-circle icon" *ngIf="isInformationBodyVisible[section]">
+    </app-button>
+
+    <div class="information-body" *ngIf="isInformationBodyVisible[section]"
+        [ngClass]="{'ng-visible': isInformationBodyVisible[section], 'ng-hidden':!isInformationBodyVisible[section]}">
+        <ng-content></ng-content>
+    </div>
+
+    <div class="separador" *ngIf="isInformationBodyVisible[section]">
+    </div>
+</div>

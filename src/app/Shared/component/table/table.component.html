@@ -1,0 +1,40 @@
+<table id="example" [ngClass]="Vclases">
+    <thead>
+        <tr>
+            <!-- Aquí iteramos sobre las columnas con *ngFor -->
+            <th *ngFor="let column of columnas"> {{ column }} </th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Aquí iteramos sobre los datos del dataSource -->
+        <tr *ngFor="let data of dataSource" >
+            <!-- Aquí traemos la información de cada columna -->
+            <td *ngFor="let item of columnas" [ngClass]="getRowClass(data[item])" > {{ data[item] }} </td>
+            <td class="row">
+                <!-- <app-button texto="Crear" clases_btn="btn crear" (click)="openModal()"></app-button> -->
+                <!-- <app-button texto="" clases_btn="btn redondo editar small" clases_icono="bi bi-eye"(click)="onAction('eliminar', data)">Delete</app-button>
+                <app-button texto="Ver" clases_btn="btn crear small icon-left"  clases_icono="bi bi-eye" (click)="onAction('editar', data)">Edit</app-button>
+                <app-button texto="Editar" clases_btn="btn editar small icon-left"  clases_icono=" fas fa-gear icon" (click)="onAction('editar', data)">Edit</app-button> -->
+                <!-- <app-button texto="Paso" clases_btn="btn crear small icon-left"  clases_icono=" fas fa-plus icon" (click)="onAction('editar', data)">Edit</app-button> -->
+                <!-- Botón Ver, visible en cualquier estado -->
+                <app-button
+                    *ngIf="data.Estado === 'Aprobado' || data.Estado === 'Rechazado' || data.Estado === 'Ajustes'"
+                    texto="Ver" clases_btn="btn crear small icon-left" clases_icono="bi bi-eye"
+                    (click)="onAction('ver', data)">
+                </app-button>
+
+                <!-- Botón Editar, visible solo cuando el Estado es 'Ajustes' -->
+                <app-button *ngIf="data.Estado === 'Ajustes'" texto="Editar" clases_btn="btn editar small icon-left"
+                    clases_icono="fas fa-gear icon" (click)="onAction('editar', data)">
+                </app-button>
+
+                <!-- Botón Delete, visible solo cuando el Estado es 'Rechazado' -->
+                <app-button *ngIf="data.Estado === 'Rechazado'" texto="" clases_btn="btn redondo editar small"
+                    clases_icono="bi bi-eye" (click)="onAction('eliminar', data)">
+                    Delete
+                </app-button>
+            </td>
+        </tr>
+    </tbody>
+</table>

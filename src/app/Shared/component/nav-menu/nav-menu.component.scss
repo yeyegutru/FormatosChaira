@@ -1,0 +1,61 @@
+.body-menus {
+    width: 100%;
+  }
+  section.menu {
+    background-color: var(--Primary-600);
+    color: var(--Shades-50);
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 2px;
+    padding: 15px;
+  }
+  section.menu:hover {
+    background-color: var(--Primary-800);
+  }
+  
+  .sub-menu {
+    border: 1px solid var(--neutral-300);
+    margin: 0 10px 10px 10px;
+  }
+
+  a{
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+  }
+
+
+  // para activar el menu correspondiente 
+  .active-submenu {
+    font: var(--Font-H3-normal);
+    color:var(--Shades-50);
+  }
+  
+  .contenedorActive{
+    background-color:var(--Primary-600); 
+    text-align: center;
+    
+}
+
+
+
+
+.sub-menu.hidden {
+  display: none;
+}
+
+
+.sub-menu.show {
+  display: block;
+}
+
+.menu i.fa-arrow-up {
+  transition: transform 0.3s; /* Agrega una transición para el icono */
+}
+
+.menu i.fa-arrow-down {
+  transform: rotate(0deg); /* Cambia el icono a una flecha hacia abajo */
+}

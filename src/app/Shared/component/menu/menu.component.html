@@ -1,0 +1,25 @@
+<section class="contenedor-menu" [ngClass]="{'collapsed': !isInformationBodyVisible['menu']}">
+        
+    <app-header
+    texto="Panel de Control" 
+    [arrowIconClass]="getArrowIconClass('menu')"  
+    [isCollapsed]="isCollapsed('menu')"
+    (iconClick)="toggleSection('menu')"
+    >
+    </app-header>
+    <div class="menu-body" *ngIf="isInformationBodyVisible['menu']">
+        <div class="info-personal">
+            <img src="../../../../assets/Img/Captura de pantalla 2024-08-03 084827.png" alt="">
+            <div>
+                <p class="text-label">Nombre : </p>
+                <p class="text-info">Pepito Perez</p>
+                <p class="text-label">Código :</p>
+                <p class="text-info">0099924431</p>
+                <p class="text-label">Cargo :</p>
+                <p class="text-info">Administrativo</p>
+            </div>
+            
+        </div>
+    </div>
+    <app-nav-menu *ngIf="isInformationBodyVisible['menu']"></app-nav-menu>
+</section>

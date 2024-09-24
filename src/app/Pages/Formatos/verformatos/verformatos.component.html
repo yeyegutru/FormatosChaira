@@ -1,0 +1,23 @@
+<section class="contenedor-information">
+    <div class="information-section">
+
+        <!-- Header  -->
+        <app-header texto='Ver Formatos' [arrowIconClass]="getArrowIconClass('section1')"
+            (iconClick)="toggleSection('section1')">
+        </app-header>
+        <!-- button -->
+        <!-- Contenedor de la informacion  -->
+        <app-button clases_btn="btn crear icon flex-start margin_top margin_left" Id="btn-1" texto="crear"
+            clases_icono=" fas fa-plus-circle icon" *ngIf="isInformationBodyVisible['section1']">
+        </app-button>
+
+        <div class="information-body" *ngIf="isInformationBodyVisible['section1']"
+            [ngClass]="{'ng-visible': isInformationBodyVisible['section1'], 'ng-hidden':!isInformationBodyVisible['section1']}">
+            <!-- <app-view-formatos></app-view-formatos> -->
+             <app-get-formatos></app-get-formatos>
+        </div>
+
+        <div class="separador" *ngIf="isInformationBodyVisible['section1']">
+        </div>
+    </div>
+</section>

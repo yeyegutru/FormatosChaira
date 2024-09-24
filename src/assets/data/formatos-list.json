@@ -1,0 +1,100 @@
+[
+    {
+        "Nombre" : "Formato de Verificaicon de mantenimientos_1 ",
+        "Codigo" : "FO-AGT-05-01",
+        "Periodo": "2017-01",
+        "Tipo_de_Formato" : "Equipos de Computo",
+        "Fecha" : "10/18/2023",
+        "Estado" : "Aprobado"
+    },
+    {
+        "Nombre" : "Formato de Verificaicon de mantenimientos_2 ",
+        "Codigo" : "FO-AGT-05-02",
+        "Periodo": "2017-02",
+        "Tipo_de_Formato" : "Equipos de Computo",
+        "Fecha" : "10/18/2023",
+        "Estado" : "Ajustes"
+    },
+    {
+        "Nombre" : "Formato de Verificaicon de mantenimientos_3 ",
+        "Codigo" : "FO-AGT-05-03",
+        "Periodo": "2018-01",
+        "Tipo_de_Formato" : "Equipos de clima",
+        "Fecha" : "10/18/2023",
+        "Estado" : "Rechazado"
+    },
+    {
+        "Nombre" : "Formato de Verificaicon de mantenimientos_1 ",
+        "Codigo" : "FO-AGT-05-01",
+        "Periodo": "2017-01",
+        "Tipo_de_Formato" : "Equipos de Computo",
+        "Fecha" : "10/18/2023",
+        "Estado" : "Ajustes"
+    },
+    {
+        "Nombre" : "Formato de Verificaicon de mantenimientos_1 ",
+        "Codigo" : "FO-AGT-05-01",
+        "Periodo": "2017-01",
+        "Tipo_de_Formato" : "Equipos de Computo",
+        "Fecha" : "10/18/2023",
+        "Estado" : "Aprobado"
+    },
+    {
+        "Nombre" : "Formato de Verificaicon de mantenimientos_1 ",
+        "Codigo" : "FO-AGT-05-01",
+        "Periodo": "2017-01",
+        "Tipo_de_Formato" : "Equipos de Computo",
+        "Fecha" : "10/18/2023",
+        "Estado" : "Ajustes"
+    },
+    {
+        "Nombre" : "Formato de Verificaicon de mantenimientos_1 ",
+        "Codigo" : "FO-AGT-05-01",
+        "Periodo": "2017-01",
+        "Tipo_de_Formato" : "Equipos de Computo",
+        "Fecha" : "10/18/2023",
+        "Estado" : "Ajustes"
+    },
+    {
+        "Nombre" : "Formato de Verificaicon de mantenimientos_1 ",
+        "Codigo" : "FO-AGT-05-01",
+        "Periodo": "2017-01",
+        "Tipo_de_Formato" : "Equipos de Computo",
+        "Fecha" : "10/18/2023",
+        "Estado" : "Aprobado"
+    },
+    {
+        "Nombre" : "Formato de Verificaicon de mantenimientos_1 ",
+        "Codigo" : "FO-AGT-05-01",
+        "Periodo": "2017-01",
+        "Tipo_de_Formato" : "Equipos de Computo",
+        "Fecha" : "10/18/2023",
+        "Estado" : "Aprobado"
+    },
+    {
+        "Nombre" : "Formato de Verificaicon de mantenimientos_1 ",
+        "Codigo" : "FO-AGT-05-01",
+        "Periodo": "2017-01",
+        "Tipo_de_Formato" : "Equipos de Computo",
+        "Fecha" : "10/18/2023",
+        "Estado" : "Rechazado"
+    },
+    {
+        "Nombre" : "Formato de Verificaicon de mantenimientos_1 ",
+        "Codigo" : "FO-AGT-05-01",
+        "Periodo": "2017-01",
+        "Tipo_de_Formato" : "Equipos de Computo",
+        "Fecha" : "10/18/2023",
+        "Estado" : "Rechazado"
+    },
+    {
+        "Nombre" : "Formato de Verificaicon de mantenimientos_1 ",
+        "Codigo" : "FO-AGT-05-01",
+        "Periodo": "2017-01",
+        "Tipo_de_Formato" : "Equipos de Computo",
+        "Fecha" : "10/18/2023",
+        "Estado" : "Rechazado"
+    }
+   
+
+]

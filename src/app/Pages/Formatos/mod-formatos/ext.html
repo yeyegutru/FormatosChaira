@@ -1,0 +1,79 @@
+<section class="contenedor-information">
+    <div class="information-section">
+        <!-- Header  -->
+        <app-header texto='Crear Formatos' [arrowIconClass]="getArrowIconClass('section1')"
+            (click)="toggleSection('section1')">
+        </app-header>
+        <!-- button -->
+        <!-- Contenedor de la informacion  -->
+        <!-- <app-button clases_btn="btn crear icon flex-start margin_top margin_left" Id="btn-1" texto="crear"
+            clases_icono=" fas fa-plus-circle icon" *ngIf="isInformationBodyVisible['section1']">
+        </app-button> -->
+
+        <div class="information-body" *ngIf="isInformationBodyVisible['section1']"
+            [ngClass]="{'ng-visible': isInformationBodyVisible['section1'], 'ng-hidden':!isInformationBodyVisible['section1']}">
+           <app-crear-formato></app-crear-formato>
+        </div>
+
+        <div class="separador" *ngIf="isInformationBodyVisible['section1']">
+        </div>
+    </div>
+
+
+
+    <div class="information-section">
+        <app-header texto="Detalles Del Formato" [arrowIconClass]="getArrowIconClass('section2')"
+            (click)="toggleSection('section2')"></app-header>
+        <div class="information-body" *ngIf="isInformationBodyVisible['section2']"
+            [ngClass]="{'ng-visible': isInformationBodyVisible['section2'], 'ng-hidden': !isInformationBodyVisible['section2']}">
+            <img class="img-formato" src="../../../../assets/Img/Formato.png" alt="">
+        </div>
+        <div class="separador" *ngIf="isInformationBodyVisible['section2']">
+
+        </div>
+    </div>
+
+    <div class="information-section">
+        <app-header texto="Informacion3 " [arrowIconClass]="getArrowIconClass('section3')"
+            (click)="toggleSection('section3')"></app-header>
+        <div class="information-body" *ngIf="isInformationBodyVisible['section3']"
+            [ngClass]="{'ng-visible': isInformationBodyVisible['section3'], 'ng-hidden': !isInformationBodyVisible['section3']}">
+
+            <app-button clases_btn="btn editar icon margin-basic flex-start" Id="btn-1" texto="Abrir Modal"
+                clases_icono=" fas far fas fa-check-double icon" (click)="openModal()"></app-button>
+            <app-modal [isVisible]="isModalVisible" titulo="Notificacion">
+                <p>Se ha Confirmado El registro de los Atributos.</p>
+                <app-button clases_btn="btn crear icon margin-basic flex-start" Id="btn-1" texto="Aceptar"
+                    clases_icono=" fas far fas fa-check-double icon" (click)="closeModal()"></app-button>
+            </app-modal>
+
+
+
+            <label class="selector_atributo row">
+                Tecnico
+                <p class="repetir" id="repetir"></p>
+                <input type="checkbox" class="checker-input" id="checker">
+            </label>
+            <label class="selector_atributo row">
+                Tecnico
+                <p class="repetir" id="repetir"></p>
+                <input type="checkbox" class="checker-input" id="checker">
+            </label>
+            <label class="selector_atributo row">
+                Tecnico
+                <p class="repetir" id="repetir"></p>
+                <input type="checkbox" class="checker-input" id="checker">
+            </label>
+            <label class="selector_atributo row">
+                Tecnico
+                <p class="repetir" id="repetir"></p>
+                <input type="checkbox" class="checker-input" id="checker">
+            </label>
+            <label class="selector_atributo row">
+                Tecnico
+                <p class="repetir" id="repetir"></p>
+                <input type="checkbox" class="checker-input" id="checker">
+            </label>
+        </div>
+    </div>
+</section>

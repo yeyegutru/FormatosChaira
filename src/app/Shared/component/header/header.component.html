@@ -1,0 +1,6 @@
+<div class="header">
+    <a class="fas fa-info-circle" *ngIf="!isCollapsed"></a>
+    <p class="header-text" *ngIf="!isCollapsed"> {{texto}}</p>
+
+    <i [ngClass]="arrowIconClass" (click)="onBackClick($event)"></i>
+</div>

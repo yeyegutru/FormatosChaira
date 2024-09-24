@@ -1,0 +1,95 @@
+
+/* botones */
+.btn{
+    display: flex;
+    flex-direction: row;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 5px;
+    align-items: center;
+    align-content: center;
+    font: var(--Font-A-bold);
+}
+.redondo{
+    border-radius: 50%;
+}
+.primary{
+    background-color: var(--Primary-500);
+    color: var(--Shades-50);
+}
+.primary:hover{
+background-color: var(--Primary-600);
+}
+
+.secondary{
+    background-color: transparent;
+    border: 1px solid var(--Primary-500);
+    color: var(--Primary-500);
+}
+
+.secondary:hover{
+    border-color: var(--Primary-600);
+    color: var(--Primary-600);
+}
+.crear{
+    background-color: var(--Success-500);
+    color: var(--Shades-50);
+}
+.crear:hover{
+    background-color: var(--Success-600);
+}
+
+.editar{
+    background-color: var(--Warning-500);
+    color: var(--Shades-50);
+}
+.editar:hover{
+    background-color: var(--Warning-600);
+}
+
+.eliminar{
+    background-color: var(--Error-600);
+    color: white;
+}
+.eliminar:hover{
+    background-color: var(--Error-700);
+}
+.primary.clicked{
+    background-color: var(--Primary-900);
+}
+
+.small{
+    font-size: 14px;
+}
+.medium{
+    font-size: 16px;
+}
+.large{
+    font-size: 18px;
+}
+
+.icon-left{
+    flex-direction: row-reverse;
+}
+.icon-right{
+    flex-direction: initial;
+}
+.icon{
+    margin: 0 8px;
+}
+.no-icon{
+    display: none;
+}
+.margin_top{
+    margin-top: 15px;
+}
+.margin_left{
+    margin-left: 15px;
+}
+.margin_rigth{
+    margin-right: 15px;
+}
+.margin_bottom{
+    margin-bottom: 15px;
+}
