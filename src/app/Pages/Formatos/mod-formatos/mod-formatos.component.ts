@@ -24,13 +24,13 @@ export class ModFormatosComponent {
     });
   }
 
-  openModal() {
-    this.modalService.open();
-  }
+  // openModal() {
+  //   this.modalService.open();
+  // }
 
-  closeModal() {
-    this.modalService.close();
-  }
+  // closeModal() {
+  //   this.modalService.close();
+  // }
 
   // // aqui es la logica para la funcionalidad de las pestañas
   isInformationBodyVisible: { [key: string]: boolean } = {

@@ -2,7 +2,7 @@
     <div *ngFor="let menu of menus; let i = index">
         <section class="menu" (click)="toggleSubMenu(i)">
             <p>{{ menu.name }}</p>
-            <i class="fa" [class.fa-arrow-down]="!isSubMenuOpen[i]" [class.fa-arrow-up]="isSubMenuOpen[i]"></i>
+            <i class="fa" [class.fa-chevron-down]="!isSubMenuOpen[i]" [class.fa-chevron-up]="isSubMenuOpen[i]"></i>
         </section>
         <section class="sub-menu" [class.hidden]="!isSubMenuOpen[i]">
             <ul>

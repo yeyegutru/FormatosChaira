@@ -13,7 +13,7 @@ export class NavMenuComponent {
       submenus: [
         { name: 'Ver formatos', link: 'verformatos' },
         { name: 'Crear formato', link: 'CrearFormatos' },
-        { name: 'Editar formato', link: 'editarformato' }
+        { name: 'Editar formato', link: 'EditarFormatos' }
       ]
     },
     {

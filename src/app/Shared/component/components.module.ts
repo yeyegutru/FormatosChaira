@@ -1,3 +1,5 @@
+// import { EditarFormatoComponent } from './post/editar-formato/editar-formatos.component';
+// import { EditarFormatoComponent } from './../../Pages/Formatos/editar-formato/editar-formato.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TableComponent } from './table/table.component';
@@ -14,7 +16,10 @@ import { CrearFormatoComponent } from './post/crear-formato/crear-formato.compon
 import { RouterModule } from '@angular/router';
 import { CamposComponent } from './campos/campos.component';
 import { PasosComponent } from './pasos/pasos.component';
-
+import { FormatoVisualComponent } from './formato-visual/formato-visual.component';
+import { routes } from 'src/app/app.routes';
+import { ReactiveFormsModule } from '@angular/forms';
+import { EditarFormatoComponent } from './post/editar-formatos/editar-formatos.component';
 
 @NgModule({
   declarations: [TableComponent,
@@ -28,12 +33,14 @@ import { PasosComponent } from './pasos/pasos.component';
   CrearFormatoComponent,
   CamposComponent,
   PasosComponent,
-
+  FormatoVisualComponent,
+  EditarFormatoComponent
   ],
   imports: [
     CommonModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
   ],
   exports:[
     TableComponent,
@@ -46,6 +53,8 @@ import { PasosComponent } from './pasos/pasos.component';
     GetFormatosComponent,
     CrearFormatoComponent,
     PasosComponent,
+    FormatoVisualComponent,
+    EditarFormatoComponent
   ],
   providers:[
     ModalFuncionService

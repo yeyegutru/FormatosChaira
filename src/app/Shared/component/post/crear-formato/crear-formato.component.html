@@ -1,14 +1,22 @@
-<form (ngSubmit)="onSubmit()" class="custom-form">
+<form [formGroup]="formatoForm" (ngSubmit)="onSubmit()" class="custom-form">
   <!-- Campo para el Nombre -->
   <div class="custom-form-group">
     <label for="nombre" class="custom-form-label">Nombre</label>
-    <input type="text" id="nombre" formControlName="nombre" class="custom-form-control" placeholder="Ingresa el nombre">
+    <input type="text" id="nombre" formControlName="Nombre" class="custom-form-control" placeholder="Ingresa el nombre">
+    <!-- Mensaje de error para el campo 'nombre' -->
+    <div *ngIf="formatoForm.get('Nombre')?.invalid && formatoForm.get('Nombre')?.touched" class="error-message">
+      El nombre es requerido.
+    </div>
   </div>
 
   <!-- Campo para el Código -->
   <div class="custom-form-group">
-    <label for="codigo" class="custom-form-label">Código</label>
-    <input type="text" id="codigo" formControlName="codigo" class="custom-form-control" placeholder="Ingresa el código">
+    <label for="Codigo" class="custom-form-label">Código</label>
+    <input type="text" id="codigo" formControlName="Codigo" class="custom-form-control" placeholder="Ingresa el código">
+    <!-- Mensaje de error para el campo 'codigo' -->
+    <div *ngIf="formatoForm.get('Codigo')?.invalid && formatoForm.get('Codigo')?.touched" class="error-message">
+      El código es requerido.
+    </div>
   </div>
 
   <!-- Select para Tipo de Formatos -->
@@ -17,12 +25,16 @@
     <select id="tipoFormato" formControlName="tipoFormato" class="custom-form-select">
       <option *ngFor="let tipo of tiposFormatos" [value]="tipo">{{ tipo }}</option>
     </select>
+    <!-- Mensaje de error para el campo 'tipoFormato' -->
+    <div *ngIf="formatoForm.get('tipoFormato')?.invalid && formatoForm.get('tipoFormato')?.touched" class="error-message">
+      Selecciona un tipo de formato.
+    </div>
   </div>
-
+  
   <!-- Botón para enviar -->
   <div class="button-container">
-    <!-- <button type="submit" class="custom-btn"><i class="fa fa-eye-dropper"></i>Enviar</button> -->
-    <app-button texto="Crear Formato" clases_btn="btn crear small icon-left" clases_icono="icon fa far fa-check-circle">
+    <app-button  [texto]="isEditMode ? 'Editar Formato' : 'Crear Formato'"  
+    [clases_btn]="isEditMode ? 'btn editar normal icon-left' : 'btn  crear normal icon-left'"  clases_icono="icon fa far fa-check-circle">
     </app-button>
   </div>
 </form>

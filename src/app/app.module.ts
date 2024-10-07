@@ -6,9 +6,10 @@ import { RouterOutlet } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { routes } from './app.routes';
+
 @NgModule({
   declarations: [
-    //AppComponent,
+
   ],
   imports: [
     BrowserModule,

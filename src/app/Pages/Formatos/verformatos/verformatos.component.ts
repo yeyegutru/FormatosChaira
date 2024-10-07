@@ -2,12 +2,15 @@ import { Component, Input } from '@angular/core';
 import { ViewFormatosComponent } from '../view-formatos/view-formatos.component';
 import { CommonModule } from '@angular/common';
 import { ComponentsModule } from 'src/app/Shared/component/components.module';
+import { RouterModule } from '@angular/router';
+import { routes } from 'src/app/app.routes';
+
 @Component({
   selector: 'app-verformatos',
   templateUrl: './verformatos.component.html',
   styleUrls: ['./verformatos.component.scss'],
   standalone:true,
-  imports: [ComponentsModule,ViewFormatosComponent,CommonModule]
+  imports: [ComponentsModule,ViewFormatosComponent,CommonModule,RouterModule]
 })
 export class VerformatosComponent {
   isInformationBodyVisible: { [key: string]: boolean } = {
@@ -28,5 +31,8 @@ export class VerformatosComponent {
       ? 'fas fa-chevron-up'
       : 'fas fa-chevron-down';
   }
+
+
+ 
 
 }

@@ -16,7 +16,7 @@
   position: relative;
   padding: 0;
   border-radius: 2px;
-  background-color: var(--Primary-200);
+  background-color: var(--Primary-700);
   -webkit-transition: opacity 400ms ease-in;
   -moz-transition: opacity 400ms ease-in;
   transition: opacity 400ms ease-in;
@@ -27,8 +27,8 @@
   padding: 20px;
   border-radius: 5px;
   position: relative;
-  width: 80%;
-  max-width: 600px;
+  // width: 80%;
+  // max-width: 800px;
 }
 
 .close {

@@ -8,7 +8,8 @@
         <!-- button -->
         <!-- Contenedor de la informacion  -->
         <app-button clases_btn="btn crear icon flex-start margin_top margin_left" Id="btn-1" texto="crear"
-            clases_icono=" fas fa-plus-circle icon" *ngIf="isInformationBodyVisible['section1']">
+            clases_icono=" fas fa-plus-circle icon" *ngIf="isInformationBodyVisible['section1']"
+            [routerLink]="['/CrearFormatos']">
         </app-button>
 
         <div class="information-body" *ngIf="isInformationBodyVisible['section1']"
@@ -16,6 +17,7 @@
             <!-- <app-view-formatos></app-view-formatos> -->
              <app-get-formatos></app-get-formatos>
         </div>
+        
 
         <div class="separador" *ngIf="isInformationBodyVisible['section1']">
         </div>

@@ -3,17 +3,18 @@ import { ComponentsModule } from 'src/app/Shared/component/components.module';
 import { ViewFormatosComponent } from '../view-formatos/view-formatos.component';
 import { CommonModule } from '@angular/common';
 import { ModalFuncionService } from 'src/app/Core/services/modal-funcion.service';
+import { HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-crear-formatos',
   templateUrl: './crear-formatos.component.html',
   styleUrls: ['./crear-formatos.component.scss'],
   standalone: true,
-  imports: [ComponentsModule,ViewFormatosComponent,CommonModule,]
+  imports: [ComponentsModule,ViewFormatosComponent,CommonModule,HttpClientModule]
 })
 export class CrearFormatosComponent {
   // Aqui se Desplica la logica para el Modal :
   isModalVisible = false;
-
+  xxx=true;
   constructor(private modalService: ModalFuncionService) {
     this.modalService.GetModalStatus().subscribe((status) => {
       this.isModalVisible = status;

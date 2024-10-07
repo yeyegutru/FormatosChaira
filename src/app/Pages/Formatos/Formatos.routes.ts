@@ -2,6 +2,7 @@ import { Routes } from "@angular/router";
 import { ModFormatosComponent } from "./mod-formatos/mod-formatos.component";
 import { CrearFormatosComponent } from "./crear-formatos/crear-formatos.component";
 import { VerformatosComponent } from "./verformatos/verformatos.component";
+import { EditarFormComponent } from "./editar-form/editar-form.component";
 
 
 
@@ -10,7 +11,8 @@ export const FORMATOS_ROUTES : Routes = [
     {path : '', component: ModFormatosComponent, 
         children:[ 
             {path : 'verformatos', component: VerformatosComponent},
-            {path : 'CrearFormatos', component : CrearFormatosComponent}
+            {path : 'CrearFormatos', component : CrearFormatosComponent},
+            {path: 'EditarFormatos', component:  CrearFormatosComponent},
         ]},
    
     // // se puede generar una especie de layout 

@@ -5,6 +5,21 @@
     <button class="close" (click)="closeModal()">X</button>
     <div class="modal-body">
       <ng-content></ng-content>
+      <div *ngIf="formatData">
+        <app-formato-visual></app-formato-visual>
+      </div>
+      <div *ngIf="mensajeMotivoRechazo">
+        <p>{{mensajeMotivoRechazo}}</p>
+      </div>
+      
+       <!-- LISTAS DE PASOS O CAMPOS
+       <div>
+        <app-pasos title="PASOS" [items]="['Pasos-saxxs 1', 'Pasos-saxxs 2', 'Pasos-saxxs 3','Pasos-saxxs 1', 'Pasos-saxxs 2', 'Pasos-saxxs 3']">></app-pasos>
+        <app-button clases_btn="btn crear icon flex-start margin_top margin_left" Id="btn-1" texto="crear"
+        clases_icono=" fas fa-plus-circle icon" >
+        </app-button>
+    </div> -->
+
     </div>
   </div>
 </div>

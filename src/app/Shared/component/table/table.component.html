@@ -20,19 +20,19 @@
                 <!-- Botón Ver, visible en cualquier estado -->
                 <app-button
                     *ngIf="data.Estado === 'Aprobado' || data.Estado === 'Rechazado' || data.Estado === 'Ajustes'"
-                    texto="Ver" clases_btn="btn crear small icon-left" clases_icono="bi bi-eye"
+                    texto="Ver" clases_btn="btn crear small icon-left" clases_icono="icon fas fa-eye"
                     (click)="onAction('ver', data)">
                 </app-button>
 
                 <!-- Botón Editar, visible solo cuando el Estado es 'Ajustes' -->
                 <app-button *ngIf="data.Estado === 'Ajustes'" texto="Editar" clases_btn="btn editar small icon-left"
-                    clases_icono="fas fa-gear icon" (click)="onAction('editar', data)">
+                    clases_icono="fas fa-gear icon" (click)="onAction('editarFormato',data)">
                 </app-button>
 
                 <!-- Botón Delete, visible solo cuando el Estado es 'Rechazado' -->
                 <app-button *ngIf="data.Estado === 'Rechazado'" texto="" clases_btn="btn redondo editar small"
-                    clases_icono="bi bi-eye" (click)="onAction('eliminar', data)">
-                    Delete
+                    clases_icono="fas fa-eye" (click)="onAction('eliminar', data)">
+                    
                 </app-button>
             </td>
         </tr>
