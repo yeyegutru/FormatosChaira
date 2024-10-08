@@ -1,15 +1,14 @@
 <div class="container-mini">
     <h2 class="title">{{ title }}</h2>
     <ul class="item-list">
-      <li *ngFor="let item of items" class="list-item">
+      <li *ngFor="let item of items; let index = index" class="list-item">
         <span class="item-text">{{ item }}</span>
         <div class="button-group">
           <app-button texto="Editar" clases_btn="btn editar small icon-left" clases_icono="icon fas fa-eye" (click)="onEdit(item)">
                 </app-button>
           <app-button texto="Eliminar" clases_btn="btn eliminar small icon-left" clases_icono="icon fas fa-eye" (click)="onDelete(item)">
                 </app-button>
-          <!-- <button class="btn btn-edit" (click)="onEdit(item)">Editar</button>
-          <button class="btn btn-delete" (click)="onDelete(item)">Eliminar</button> -->
+                <app-button *ngIf="title!='PASOS'" texto="Crear Paso" clases_btn="btn crear small icon-left" clases_icono="icon fas fa-eye" (click)="onAction('ver',[index+'',index+''])"></app-button>
         </div>
       </li>
     </ul>

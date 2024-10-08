@@ -34,7 +34,7 @@
   <!-- Botón para enviar -->
   <div class="button-container">
     <app-button  [texto]="isEditMode ? 'Editar Formato' : 'Crear Formato'"  
-    [clases_btn]="isEditMode ? 'btn editar normal icon-left' : 'btn  crear normal icon-left'"  clases_icono="icon fa far fa-check-circle">
+    [clases_btn]="isEditMode ? 'btn editar normal icon-left' : 'btn  crear normal icon-left'"  clases_icono="icon fa far fa-check-circle" (click)="handleClick()">
     </app-button>
   </div>
 </form>

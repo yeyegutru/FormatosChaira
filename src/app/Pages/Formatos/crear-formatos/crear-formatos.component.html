@@ -22,14 +22,39 @@
 
 
     <div class="information-section " [ngClass]="{'no-flex': !isInformationBodyVisible['section2']}">
-        <app-header texto="Detalles Del Formato" [arrowIconClass]="getArrowIconClass('section2')"
+        <app-header texto="CAMPOS DEL FORMATO" [arrowIconClass]="getArrowIconClass('section2')"
             (iconClick)="toggleSection('section2')"></app-header>
         <div class="information-body" *ngIf="isInformationBodyVisible['section2']"
             [ngClass]="{'ng-visible': isInformationBodyVisible['section2'], 'ng-hidden': !isInformationBodyVisible['section2']}">
             <div class="contenedor-funciones">
                 <!-- LISTA DE PASOS  O CAMPOS -->
                 <div class="contenedor-listas">
-                    <app-pasos title="CAMPOS" [items]="['Campos_xxxx 1', 'Campos_xxxx 2', 'Campos_xxxx 3']">></app-pasos>
+                    <app-pasos title="CAMPOS" [items]="itemsCampos" (action)="onAction($event.accion, $event.fila||[])">></app-pasos>
+                    <!-- (action)="onAction($event.accion, $event.fila||[])" -->
+                    <app-button clases_btn="btn crear icon flex-start margin_top margin_left" Id="btn-1" texto="crear"
+                    clases_icono=" fas fa-plus-circle icon"  (click)="OpenModalCrearCampos()">
+                        </app-button>
+                </div>
+               
+                
+            </div>
+
+            <div class="separador">
+    
+            </div>
+        </div>
+    </div>
+
+    <div class="information-section" *ngIf="items.length>0" [ngClass]="{'no-flex': !isInformationBodyVisible['section3']}">
+        <app-header texto="PASOS DEL FORMATO" [arrowIconClass]="getArrowIconClass('section3')"
+            (iconClick)="toggleSection('section3')"></app-header>
+        <div class="information-body" *ngIf="isInformationBodyVisible['section3']"
+            [ngClass]="{'ng-visible': isInformationBodyVisible['section3'], 'ng-hidden': !isInformationBodyVisible['section3']}">
+            <div class="contenedor-funciones">
+                <!-- LISTA DE PASOS  O CAMPOS -->
+                <div class="contenedor-listas">
+                    <app-pasos title="PASOS" (action)="onAction($event.accion, $event.fila||[])"             [items]="items"
+                    ></app-pasos>
                     <app-button clases_btn="btn crear icon flex-start margin_top margin_left" Id="btn-1" texto="crear"
                     clases_icono=" fas fa-plus-circle icon" >
                         </app-button>
@@ -43,6 +68,7 @@
             </div>
         </div>
     </div>
+
     <app-modal></app-modal>
     <!-- <div class="information-section">
         <app-header texto="Informacion3 " [arrowIconClass]="getArrowIconClass('section3')"

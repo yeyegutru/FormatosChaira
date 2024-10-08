@@ -1,0 +1,26 @@
+<div class="cont-formulario" *ngIf="CrearCamposBandera">
+    <!-- Lista de campos agregados -->
+    <div class="lista">
+        <ol>
+            <li *ngFor="let campo of campos">{{ campo }}</li>
+        </ol>
+    </div>
+    
+    <!-- Input para crear un nuevo campo -->
+    <div class="cont-formulario">
+        <label>Campos de Formatos</label>
+        <input [formControl]="nuevoCampoFormControl" placeholder="Nombre del Campo" />
+        
+        <!-- Mensaje de error -->
+        <div *ngIf="nuevoCampoFormControl.invalid && (nuevoCampoFormControl.dirty || nuevoCampoFormControl.touched)">
+            <p class="error-message">Por favor, completa este campo.</p>
+        </div>
+        
+        <app-button  
+            texto="Crear Campo"
+            clases_btn="btn crear normal icon-left" 
+            clases_icono="icon fa far fa-check-circle" 
+            (click)="crearCampo()">
+        </app-button>
+    </div>
+</div>

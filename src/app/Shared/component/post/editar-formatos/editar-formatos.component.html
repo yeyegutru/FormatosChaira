@@ -1,0 +1,28 @@
+<form [formGroup]="formatoForm" (ngSubmit)="onSubmit()" class="custom-form">
+
+    <div class="custom-form-group">
+      <label for="nombre" class="custom-form-label">Nombre</label>
+      <input type="text" id="nombre" formControlName="nombre" class="custom-form-control" placeholder="Ingresa el nombre">
+    </div>
+  
+
+    <div class="custom-form-group">
+      <label for="codigo" class="custom-form-label">Código</label>
+      <input type="text" id="codigo" formControlName="codigo" class="custom-form-control" placeholder="Ingresa el código">
+    </div>
+  
+ 
+    <div class="custom-form-group">
+      <label for="tipoFormato" class="custom-form-label">Tipo de Formato</label>
+      <select id="tipoFormato" formControlName="tipoFormato" class="custom-form-select">
+        <option *ngFor="let tipo of tiposFormatos" [value]="tipo">{{ tipo }}</option>
+      </select>
+    </div>
+  
+
+    <div class="button-container">
+      <app-button texto="Crear Formato" clases_btn="btn crear normal icon-left" clases_icono="icon fa far fa-check-circle">
+      </app-button>
+    </div>
+  </form>
+  

@@ -1,0 +1,32 @@
+<section class="contenedor-information">
+    <div class="information-section" [ngClass]="{'no-flex': !isInformationBodyVisible['section1']}">
+        <!-- Header  -->
+        <app-header texto='Crear Formatos' [arrowIconClass]="getArrowIconClass('section1')"
+            (iconClick)="toggleSection('section1')">
+        </app-header>
+
+
+        <div class="information-body" *ngIf="isInformationBodyVisible['section1']"
+            [ngClass]="{'ng-visible': isInformationBodyVisible['section1'], 'ng-hidden':!isInformationBodyVisible['section1']}">
+           <app-editar-formatos></app-editar-formatos>
+        </div>
+
+        <div class="separador" *ngIf="isInformationBodyVisible['section1']">
+        </div>
+    </div>
+    <div class="information-section" [ngClass]="{'no-flex': !isInformationBodyVisible['section1']}">
+        <!-- Header  -->
+        <app-header texto='Crear Formatos' [arrowIconClass]="getArrowIconClass('section1')"
+            (iconClick)="toggleSection('section1')">
+        </app-header>
+
+
+        <div class="information-body" *ngIf="isInformationBodyVisible['section1']"
+            [ngClass]="{'ng-visible': isInformationBodyVisible['section1'], 'ng-hidden':!isInformationBodyVisible['section1']}">
+           <app-editar-formatos></app-editar-formatos>
+        </div>
+
+        <div class="separador" *ngIf="isInformationBodyVisible['section1']">
+        </div>
+    </div>
+</section>

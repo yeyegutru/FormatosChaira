@@ -1,0 +1,22 @@
+{
+    "header": {
+      "title": "Formato de gestion de productos tecnologicos para el caqueta",
+      "codigo": "FT-00124-SADAS",
+      "version": "1",
+      "fecha": "17/09/2024"
+    },
+    "body": [
+      {
+        "titulo": "Titulo",
+        "codigo": "Codigo",
+        "version": "Version"
+      },
+      {
+        "titulo": "Titulo",
+        "codigo": "Codigo",
+        "version": "Version"
+      }
+    ],
+    "pasos": ["1", "2", "3", "4", "5"]
+  }
+  

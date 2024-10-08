@@ -1,0 +1,44 @@
+.container-paper {
+    /* background: pink; */
+    width: 1000px;
+    height: calc(700px*(8.5/11));
+    overflow: hidden;
+    /* Evita que el contenido desborde */
+    position: relative;
+    /* Asegura que el contenido se mantenga dentro */
+}
+
+img {
+    width: 100px;
+}
+
+table {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    font: var(--Font-P-normal) !important;
+}
+
+/* table  */
+
+.Formato td {
+    border: 1px solid black;
+    font-size: 14px;
+}
+
+.Formato th {
+    border: 1px solid black;
+    font-weight: bold !important;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    border: none;
+}
+input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    margin: 3px;
+}

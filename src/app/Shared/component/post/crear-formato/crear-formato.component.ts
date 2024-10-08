@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router'; // Para capturar el id de la ruta
 
@@ -8,6 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router'; // Para capturar el id
   styleUrls: ['./crear-formato.component.scss']
 })
 export class CrearFormatoComponent implements OnInit {
+  @Output() clicked: EventEmitter<void> = new EventEmitter();
   // Variables que se utilizan 
   formatoForm: FormGroup;
   tiposFormatos: string[] = ['Formato A', 'Formato B', 'Formato C']; // Lista de tipos de formatos
@@ -75,6 +76,8 @@ export class CrearFormatoComponent implements OnInit {
     }
   }
 
+  
+
   // Función para marcar todos los controles como tocados
   markAllAsTouched(): void {
     Object.keys(this.formatoForm.controls).forEach(control => {
@@ -129,7 +132,9 @@ export class CrearFormatoComponent implements OnInit {
     }
   }
 
-  
+  handleClick(): void {
+    this.clicked.emit(); // Emitir el evento hacia arriba
+  }
 
 
 

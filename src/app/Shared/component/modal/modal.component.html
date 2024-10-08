@@ -8,18 +8,21 @@
       <div *ngIf="formatData">
         <app-formato-visual></app-formato-visual>
       </div>
-      <div *ngIf="mensajeMotivoRechazo">
-        <p>{{mensajeMotivoRechazo}}</p>
-      </div>
-      
-       <!-- LISTAS DE PASOS O CAMPOS
-       <div>
-        <app-pasos title="PASOS" [items]="['Pasos-saxxs 1', 'Pasos-saxxs 2', 'Pasos-saxxs 3','Pasos-saxxs 1', 'Pasos-saxxs 2', 'Pasos-saxxs 3']">></app-pasos>
+      <!-- 
+        <div *ngIf="true">
+          <app-pasos title="pasos" [items]=PasosFormato></app-pasos>
         <app-button clases_btn="btn crear icon flex-start margin_top margin_left" Id="btn-1" texto="crear"
-        clases_icono=" fas fa-plus-circle icon" >
-        </app-button>
+        clases_icono=" fas fa-plus-circle icon">
+      </app-button>
     </div> -->
+    
+    <div *ngIf="CrearCamposBandera">
+      <app-formulario-crear-campo ></app-formulario-crear-campo>
+    </div>
 
+    <div *ngIf="mensajeMotivoRechazo">
+      <p [ngClass]="{'active_class': active_class, 'inactive-class': !active_class}">{{mensajeMotivoRechazo}}</p>
     </div>
   </div>
+</div>
 </div>

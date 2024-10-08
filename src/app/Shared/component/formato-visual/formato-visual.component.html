@@ -1,0 +1,62 @@
+<div *ngIf="data" class="container-paper">
+  <table style="font-size: 16px;" class="Formato">
+    <tr>
+      <th colspan="3" rowspan="3">
+        <img src="../../../../assets/Img/images.png" alt="">
+      </th>
+      <th [attr.colspan]="keyheader.length">{{data.header.title}}</th>
+    </tr>
+    <tr>
+      <th *ngFor="let item of keyheader">{{item}}</th>
+    </tr>
+    <tr>
+      <td *ngFor="let item of keyheader">
+        {{data.header[item]}}
+      </td>
+
+    </tr>
+
+    <tr>
+      <td [attr.colspan]="keyheader.length+3">
+        <table class="Formato">
+          <tr>
+            <td *ngFor="let item of keybody">
+              {{item}}
+              <table *ngIf="ObtenerBooleanArreglo(data.body[item])" class="Formato">
+                <tr>
+                  <td *ngFor="let p of data.body[item]">{{p}}</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr *ngFor="let step of [].constructor(10); let i = index">
+            <td *ngFor="let item of keybody">
+              <input *ngIf="!ObtenerBooleanArreglo(data.body[item])" type="text">
+              <table *ngIf="ObtenerBooleanArreglo(data.body[item])" class="Formato">
+                <tr>
+                  <td *ngFor="let p of data.body[item]">
+                    <input type="checkbox" name="" id="">
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+
+        </table>
+      </td>
+
+    </tr>
+    <tr>
+
+   
+
+  </table>
+
+
+
+
+
+
+
+</div>

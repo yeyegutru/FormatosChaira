@@ -1,0 +1,94 @@
+/* Estilos para centrar y hacer el formulario más atractivo */
+div.cont-formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Para centrar en la pantalla */
+}
+
+/* Contenedor de la lista */
+div.lista {
+    display: flex;
+    overflow: auto;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    justify-content: center; /* Centra la lista horizontalmente */
+    max-width: 400px; /* Asegura que no sobrepase el ancho del contenedor */
+    max-height: 300px; /* Asegura que no sobrepase el ancho del contenedor */
+}
+
+/* Estilos para la lista */
+ol {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    list-style-type:decimal; /* Elimina la numeración predeterminada */
+    list-style-position: outside;
+    padding: -10; /* Elimina el espaciado predeterminado */
+}
+
+/* Estilos para la lista */
+ol {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    list-style-position: inside; /* Asegura que los números estén dentro del bloque */
+    padding-left: 0; /* Elimina el espaciado izquierdo predeterminado */
+    margin: 0; /* Elimina el margen predeterminado */
+}
+
+/* Estilos para los elementos de la lista */
+li {
+    font-size: 18px;
+    padding: 10px 20px; /* Espaciado interno del texto */
+    background-color: var(--Success-300);
+    margin: 5px; /* Margen entre los elementos */
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1 0 30%; /* Permite que los elementos tomen el 30% del ancho disponible */
+    max-width: 300px; /* Ancho máximo de cada elemento */
+}
+
+/* Ajustes adicionales para la alineación de los decoradores */
+li::marker {
+    margin-right: 10px; /* Espacio entre el decorador y el texto */
+}
+
+/* Estilos para el campo de entrada */
+input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #00b4d8;
+    width: 300px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #0077b6;
+}
+
+/* Estilos para el botón */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #00b4d8;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0077b6;
+}
+
+label{
+    font-weight: 800;
+}
+
+.error-message {
+    color: red; /* Cambia el color del texto a rojo */
+    font-size: 0.6em; /* Ajusta el tamaño de la fuente si es necesario */
+}
