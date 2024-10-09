@@ -14,6 +14,7 @@ export class ModalComponent implements OnInit {
   @Input() mensajeMotivoRechazo!: string;
   @Input() PasosFormato!: string[];
   @Input() CrearCamposBandera: boolean = false;
+  @Input() CrearPasosBandera: boolean = false;
   @Input() active_class: boolean = false;
   
   
@@ -51,6 +52,12 @@ export class ModalComponent implements OnInit {
     this.ModalService.getActiveClass().subscribe((campo) => { 
       this.active_class = campo;
     })
+
+    this.ModalService.getCrearPasos().subscribe((bandera)=>{
+      this.CrearPasosBandera=bandera;
+      console.log('estoy aqui'+ bandera);
+    })
+
   }
  
   closeModal() {

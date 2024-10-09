@@ -15,10 +15,10 @@
         clases_icono=" fas fa-plus-circle icon">
       </app-button>
     </div> -->
-    
-    <div *ngIf="CrearCamposBandera">
-      <app-formulario-crear-campo ></app-formulario-crear-campo>
+    <div>
+      <app-formulario-crear-campo [CrearCampos]="CrearCamposBandera" [CrearPasos]="CrearPasosBandera"></app-formulario-crear-campo>
     </div>
+    
 
     <div *ngIf="mensajeMotivoRechazo">
       <p [ngClass]="{'active_class': active_class, 'inactive-class': !active_class}">{{mensajeMotivoRechazo}}</p>

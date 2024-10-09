@@ -19,9 +19,11 @@ private Pasos = new Subject<string[]>();
 // variable para mostrar la parte de crear Campo
 private CrearCampos=new Subject<boolean>();
 private CrearPasos=new Subject<boolean>();
+
 private active_class=new Subject<boolean>();
 
 // funcion para abrir el modal 
+ 
 open(){
   this.modalVisibility.next(true);
 }
@@ -48,6 +50,14 @@ openPasosFormatos(pasos:string[],titulo :string){
 openCrearCampos(){
   this.CrearCampos.next(true);
   this.titulo.next("CrearCampos");
+  console.log(this.CrearCampos);
+  this.open();
+}
+
+OpenCrearPasos(){
+  this.CrearPasos.next(true);
+  console.log(this.CrearPasos);
+  this.titulo.next("Crear Pasos");
   this.open();
 }
 ActiveClass(){
@@ -83,7 +93,9 @@ getPasosFormato(){
 getCrearCampos(){
   return this.CrearCampos.asObservable(); // Observable para escuchar la creación de campos
 }
-
+getCrearPasos(){
+  return this.CrearPasos.asObservable();
+}
 getActiveClass(){
   return this.active_class.asObservable(); // Observable para escuchar la clase para mostrar el modal
 }

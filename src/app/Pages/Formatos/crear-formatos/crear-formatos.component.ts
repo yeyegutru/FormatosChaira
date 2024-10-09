@@ -20,7 +20,9 @@ export class CrearFormatosComponent {
   array:any[]=[{'id':1,'vector':["paso1","paso2"]},{'id':2,'vector':["paso3","paso4"]},{'id':0,'vector':["paso5","paso6"]}];
   itemsCampos:string[]=["Campo 1", "Campo 2", "Campo 3", "Campo 4"];
   items:string[]=[];
-  
+  crearFormato(){
+    
+  };
   onAction(accion:string, fila:string[] ) {
     if (accion === 'ver') {
       // this.items=['paso1', 'paso2','paso3','paso4','paso5'];
@@ -73,10 +75,14 @@ cargardatosPasos(id:number)
 }
 
 handleClick():void{
-
+  this.itemsCampos=["Campo 1", "Campo 2", "Campo 3", "Campo 4"];
 }
 OpenModalCrearCampos(){
   this.ModalService.openCrearCampos();
+}
+
+OpenModalCrearPasos(){
+  this.ModalService.OpenCrearPasos();
 }
  // Método que recibe el nuevo campo desde el modal
  

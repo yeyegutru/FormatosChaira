@@ -21,7 +21,6 @@ import { routes } from 'src/app/app.routes';
 import { ReactiveFormsModule } from '@angular/forms';
 import { EditarFormatoComponent } from './post/editar-formatos/editar-formatos.component';
 import { FormularioCrearCampoComponent } from './post/formulario-crear-campo/formulario-crear-campo.component';
-import { FormularioCrearPasoComponent } from './post/formulario-crear-paso/formulario-crear-paso.component';
 
 @NgModule({
   declarations: [TableComponent,
@@ -38,7 +37,6 @@ import { FormularioCrearPasoComponent } from './post/formulario-crear-paso/formu
   FormatoVisualComponent,
   EditarFormatoComponent,
   FormularioCrearCampoComponent,
-  FormularioCrearPasoComponent
   ],
   imports: [
     CommonModule,
@@ -60,7 +58,6 @@ import { FormularioCrearPasoComponent } from './post/formulario-crear-paso/formu
     FormatoVisualComponent,
     EditarFormatoComponent,
     FormularioCrearCampoComponent,
-    FormularioCrearPasoComponent
   ],
   providers:[
     ModalFuncionService
